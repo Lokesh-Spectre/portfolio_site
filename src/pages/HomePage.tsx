@@ -1,3 +1,4 @@
+// src\pages\HomePage.tsx
 import React, { useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { Github, Linkedin, ChevronDown, ArrowRight } from 'lucide-react';
@@ -35,7 +36,7 @@ const HomePage: React.FC = () => {
               },
               modes: {
                 push: {
-                  quantity: 4,
+                  quantity: 1,
                 },
                 repulse: {
                   distance: 100,
@@ -49,7 +50,7 @@ const HomePage: React.FC = () => {
               },
               links: {
                 color: "#ffffff",
-                distance: 150,
+                distance: 30,
                 enable: true,
                 opacity: 0.3,
                 width: 1,
@@ -61,7 +62,7 @@ const HomePage: React.FC = () => {
                   default: "bounce",
                 },
                 random: false,
-                speed: 2,
+                speed: 3,
                 straight: false,
               },
               number: {
