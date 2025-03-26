@@ -1,3 +1,4 @@
+// src\pages\ProjectsPage.tsx
 import React, { useState, useEffect } from 'react';
 import { useLocation, useSearchParams } from 'react-router-dom';
 import { Search, X } from 'lucide-react';
@@ -114,7 +115,7 @@ const ProjectsPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-indigo-50/30 pt-24 px-4">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center mb-8">
           <h1 className="text-4xl font-bold text-gray-900">Featured Projects</h1>
           {(searchTerm || selectedTags.length > 0) && (
@@ -160,7 +161,7 @@ const ProjectsPage: React.FC = () => {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-3 gap-8">
           {filteredProjects.map((project, index) => (
             <ProjectCard key={index} {...project} />
           ))}

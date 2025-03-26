@@ -1,3 +1,4 @@
+// src\pages\ExpertisePage.tsx
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -43,22 +44,32 @@ const ExpertisePage: React.FC = () => {
 
   const timeline = [
     {
+      year: '2018',
+      event: 'Embedded Systems (Hobby)',
+      description: 'Started with Arduino Uno, Nano, and ESP32; built several DIY projects.'
+    },
+    {
+      year: '2020',
+      event: 'Python & Linux',
+      description: 'Mastered Python; developed desktop applications and utilities using Qt; learned Linux system administration.'
+    },
+    {
       year: '2022',
-      event: 'Started Embedded Development',
-      description: 'First ESP32 project with FreeRTOS'
+      event: 'Python Desktop Development',
+      description: 'Built multiple desktop applications and automation tools using Python and PyQt for enhanced user interfaces.'
     },
     {
       year: '2023',
       event: 'Full Stack Development',
-      description: 'Built scalable web applications with React and Node.js'
+      description: 'Built scalable web applications with React and Node.js.'
     },
     {
       year: '2024',
       event: 'IoT Solutions',
-      description: 'Developed enterprise IoT monitoring systems'
+      description: 'Developed enterprise IoT monitoring systems.'
     }
   ];
-
+  
   const certifications = [
     {
       title: 'AWS Cloud Practitioner',
@@ -73,9 +84,9 @@ const ExpertisePage: React.FC = () => {
   ];
 
   const exploringSkills = [
-    { name: 'Rust', description: 'Systems Programming' },
-    { name: 'Cloud Security', description: 'AWS & Azure Security' },
-    { name: 'Edge Computing', description: 'Distributed Systems' }
+    { name: 'Embedded Frameworks', description: 'Exploring STMicroelectronics CubeIDE and other alternatives' },
+    { name: 'Backend Frameworks', description: 'Diving deeper into advanced backend technologies' },
+    { name: 'PyTorch ML', description: 'Experimenting with deep learning models and AI applications' }
   ];
 
   return (
