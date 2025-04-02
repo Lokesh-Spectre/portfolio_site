@@ -1,4 +1,3 @@
-// src\pages\TechStackPage.tsx
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
@@ -102,7 +101,7 @@ const TechStackPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-indigo-50/30 pt-24 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-indigo-50/30 pt-24 px-4 pb-24">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <motion.div
@@ -134,19 +133,21 @@ const TechStackPage: React.FC = () => {
                 {categoryIcons[category]}
                 <h3 className="text-lg font-semibold">{category}</h3>
               </div>
-              <div className="h-32 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-transparent hover:scrollbar-thumb-gray-500">
-  <div className="flex flex-wrap gap-2">
-    {techs.map((tech) => (
-      <span
-        key={tech}
-        className="px-3 py-1 bg-white/80 backdrop-blur-sm rounded-full text-sm font-medium"
-      >
-        {tech}
-      </span>
-    ))}
-  </div>
-</div>
-
+              <div className="h-32 overflow-y-auto pr-2" style={{
+                scrollbarWidth: 'thin',
+                scrollbarColor: 'rgba(156, 163, 175, 0.5) transparent',
+              }}>
+                <div className="flex flex-wrap gap-2">
+                  {techs.map((tech) => (
+                    <span
+                      key={tech}
+                      className="px-3 py-1 bg-white/80 backdrop-blur-sm rounded-full text-sm font-medium"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </motion.div>
           ))}
         </motion.div>

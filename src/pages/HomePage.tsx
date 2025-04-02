@@ -1,7 +1,6 @@
-// src\pages\HomePage.tsx
 import React, { useCallback } from 'react';
 import { Link } from 'react-router-dom';
-import { Github, Linkedin, ChevronDown, ArrowRight } from 'lucide-react';
+import { Github, Linkedin, ArrowRight } from 'lucide-react';
 import { loadSlim } from "tsparticles-slim";
 import type { Engine } from "tsparticles-engine";
 import Particles from "react-tsparticles";
@@ -114,9 +113,6 @@ const HomePage: React.FC = () => {
               <ArrowRight className="group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
-        </div>
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce z-10">
-          <ChevronDown size={24} className="text-white/70" />
         </div>
       </header>
     </>

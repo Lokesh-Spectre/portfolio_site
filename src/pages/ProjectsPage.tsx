@@ -114,7 +114,7 @@ const ProjectsPage: React.FC = () => {
   ).sort();
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-indigo-50/30 pt-24 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-indigo-50/30 py-24 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center mb-8">
           <h1 className="text-4xl font-bold text-gray-900">Featured Projects</h1>

@@ -1,4 +1,3 @@
-// src\pages\ExpertisePage.tsx
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -9,7 +8,6 @@ import {
   Brain,
   Database,
   Cloud,
-  Award,
   Sparkles,
   ArrowRight,
 } from 'lucide-react';
@@ -65,21 +63,8 @@ const ExpertisePage: React.FC = () => {
     },
     {
       year: '2024',
-      event: 'IoT Solutions',
-      description: 'Developed enterprise IoT monitoring systems.'
-    }
-  ];
-  
-  const certifications = [
-    {
-      title: 'AWS Cloud Practitioner',
-      issuer: 'Amazon Web Services',
-      date: '2024'
-    },
-    {
-      title: 'Professional Scrum Master I',
-      issuer: 'Scrum.org',
-      date: '2023'
+      event: 'Backend & Embedded Engineer at EmBlock Tech',
+      description: 'Developing enterprise IoT monitoring systems and backend infrastructure.'
     }
   ];
 
@@ -90,7 +75,7 @@ const ExpertisePage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-indigo-50/30 pt-24">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-indigo-50/30 pt-24 pb-1">
       {/* Hero Section */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -102,6 +87,38 @@ const ExpertisePage: React.FC = () => {
           Specialized in creating robust solutions across multiple domains, from embedded systems
           to scalable cloud applications.
         </p>
+      </motion.div>
+
+      {/* Current Position */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="max-w-7xl mx-auto px-4 mb-16"
+      >
+        <div className="bg-white rounded-xl shadow-lg p-8 border border-indigo-50">
+          <div className="flex items-center gap-8">
+            <div className="w-32 h-32 flex-shrink-0">
+              <a href="https://emblocktech.com" target="_blank" rel="noopener noreferrer">
+                <img
+                  src="https://i.postimg.cc/zDLL7G3t/emblocktech-logo.jpg"
+                  alt="EmBlock Tech Logo"
+                  className="w-full h-full object-contain"
+                />
+              </a>
+            </div>
+            <div>
+              <h2 className="text-2xl font-bold text-gray-900 mb-2">Backend & Embedded Engineer</h2>
+              <h3 className="text-xl text-indigo-600 mb-4">
+                <a href="https://emblocktech.com" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-700">
+                  EmBlock Tech
+                </a>
+              </h3>
+              <p className="text-gray-600">
+                Currently working on enterprise IoT solutions and backend infrastructure, combining embedded systems expertise with modern web technologies.
+              </p>
+            </div>
+          </div>
+        </div>
       </motion.div>
 
       {/* Core Skills */}
@@ -220,35 +237,6 @@ const ExpertisePage: React.FC = () => {
               </div>
               <h3 className="text-lg font-semibold text-gray-900">{item.event}</h3>
               <p className="text-gray-600">{item.description}</p>
-            </motion.div>
-          ))}
-        </div>
-      </motion.div>
-
-      {/* Certifications Grid */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        className="max-w-7xl mx-auto px-4 mb-24"
-      >
-        <h2 className="text-2xl font-semibold text-gray-900 mb-8">Certifications & Achievements</h2>
-        <div className="grid md:grid-cols-2 gap-6">
-          {certifications.map((cert, index) => (
-            <motion.div
-              key={cert.title}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.2 }}
-              className="p-6 bg-white rounded-xl shadow-md border border-indigo-50"
-            >
-              <div className="flex items-start gap-4">
-                <Award className="w-8 h-8 text-indigo-600" />
-                <div>
-                  <h3 className="font-semibold text-gray-900">{cert.title}</h3>
-                  <p className="text-gray-600">{cert.issuer}</p>
-                  <p className="text-sm text-gray-500">{cert.date}</p>
-                </div>
-              </div>
             </motion.div>
           ))}
         </div>
